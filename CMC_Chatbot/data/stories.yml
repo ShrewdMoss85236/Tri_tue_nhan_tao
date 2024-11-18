@@ -1,0 +1,85 @@
+version: "3.1"
+stories:
+- story: tra cứu lịch học
+  steps:
+  - intent: lich_hoc
+  - action: utter_lich_hoc
+
+- story: hỏi về học phí
+  steps:
+  - intent: hoc_phi
+  - action: utter_hoc_phi
+
+- story: hỏi về chương trình đào tạo
+  steps:
+  - intent: chuong_trinh_dao_tao
+  - action: utter_chuong_trinh_dao_tao
+
+- story: thủ tục hành chính
+  steps:
+  - intent: thu_tuc_hanh_chinh
+  - action: utter_thu_tuc_hanh_chinh
+
+- story: thông báo sự kiện
+  steps:
+  - intent: thong_bao_su_kien
+  - action: utter_thong_bao_su_kien
+
+- story: hỗ trợ kỹ thuật
+  steps:
+  - intent: ho_tro_ky_thuat
+  - action: utter_ho_tro_ky_thuat
+
+- story: tư vấn tuyển sinh
+  steps:
+  - intent: tuyen_sinh
+  - action: utter_tuyen_sinh
+
+- story: hướng dẫn tra cứu lịch học
+  steps:
+  - intent: lich_hoc_chi_tiet
+  - action: utter_lich_hoc_huongdan
+
+- story: hướng dẫn học phí
+  steps:
+  - intent: hoc_phi_chi_tiet
+  - action: utter_hoc_phi_huongdan
+
+- story: hướng dẫn chương trình đào tạo
+  steps:
+  - intent: chuong_trinh_chi_tiet
+  - action: utter_chuong_trinh_huongdan
+
+- story: hướng dẫn thủ tục hành chính
+  steps:
+  - intent: thu_tuc_chi_tiet
+  - action: utter_thu_tuc_huongdan
+
+- story: hỗ trợ kỹ thuật chi tiết
+  steps:
+  - intent: ho_tro_ky_thuat_chi_tiet
+  - action: utter_ho_tro_ky_thuat_huongdan
+
+- story: hỏi về lịch học cụ thể
+  steps:
+  - intent: lich_hoc_chi_tiet
+  - action: utter_lich_hoc_huongdan
+  - action: utter_lich_hoc
+
+- story: hỏi về học phí cụ thể
+  steps:
+  - intent: hoc_phi_chi_tiet
+  - action: utter_hoc_phi_huongdan
+  - action: utter_hoc_phi
+
+- story: hỏi về thông báo sự kiện cụ thể
+  steps:
+  - intent: thong_bao_su_kien
+  - action: utter_thong_bao_su_kien
+  - action: utter_thong_bao_su_kien
+
+- story: hỏi về chương trình đào tạo chi tiết
+  steps:
+  - intent: chuong_trinh_chi_tiet
+  - action: utter_chuong_trinh_huongdan
+  - action: utter_chuong_trinh_dao_tao

@@ -1,0 +1,137 @@
+version: "3.1"
+nlu:
+- intent: lich_hoc
+  examples: |
+    - Lịch học của tôi tuần này như thế nào?
+    - Kỳ học mới bắt đầu từ khi nào?
+    - Lớp [ten_lop] có thay đổi lịch học không?
+    - Tôi muốn biết giờ học của mình
+    - Thời khóa biểu chi tiết của tôi
+    - Tra cứu lịch học sinh viên [ma_sinh_vien]
+    - Lịch học ngành [ten_nganh] như thế nào?
+    - Xem TKB của tôi
+    - Lịch học tuần tới của tôi ra sao?
+    - Kiểm tra giờ học chính xác
+
+- intent: hoc_phi
+  examples: |
+    - Học phí kỳ này là bao nhiêu?
+    - Các khoản phí tôi phải đóng?
+    - Hạn nộp học phí là ngày nào?
+    - Có chính sách hỗ trợ học phí không?
+    - Chi phí học tập ngành [tên_ngành]
+    - Thông tin học phí cho sinh viên [ma_sinh_vien]
+    - Mức học phí hiện tại
+    - Cách thức thanh toán học phí
+    - Các khoản phí phải biết
+    - Kiểm tra số dư học phí
+
+- intent: chuong_trinh_dao_tao
+  examples: |
+    - Ngành [tên ngành] học những môn gì?
+    - Các môn học bắt buộc và tự chọn
+    - Điều kiện học vượt như thế nào?
+    - Yêu cầu tốt nghiệp ngành [tên_ngành]
+    - Chi tiết chương trình đào tạo
+    - Môn học của ngành [tên_ngành]
+    - Cấu trúc chương trình học
+    - Điều kiện tích lũy tín chỉ
+    - Quy định học tập của ngành
+    - Danh sách môn học chi tiết
+
+- intent: thu_tuc_hanh_chinh
+  examples: |
+    - Hướng dẫn xin giấy xác nhận sinh viên
+    - Thủ tục bảo lưu học tập
+    - Cách đăng ký/hủy môn học
+    - Cập nhật thông tin cá nhân
+    - Quy trình đăng ký môn học
+    - Hướng dẫn nộp đơn bảo lưu
+    - Thủ tục chuyển ngành
+    - Làm giấy tờ hành chính
+    - Các loại giấy tờ cần thiết
+    - Hướng dẫn xác nhận sinh viên
+
+- intent: thong_bao_su_kien
+  examples: |
+    - Sự kiện sắp tới của trường
+    - Thông báo mới nhất
+    - Cách tham gia câu lạc bộ
+    - Thông tin hội thảo nghề nghiệp
+    - Lịch sự kiện trong tháng
+    - Hoạt động ngoại khóa
+    - Sự kiện học thuật
+    - Thông báo quan trọng
+    - Các hoạt động sinh viên
+    - Sự kiện nổi bật
+
+- intent: ho_tro_ky_thuat
+  examples: |
+    - Truy cập hệ thống học trực tuyến
+    - Quên mật khẩu xử lý thế nào?
+    - Hướng dẫn vào thư viện điện tử
+    - Lỗi đăng nhập cổng thông tin
+    - Vấn đề với tài khoản sinh viên
+    - Khôi phục mật khẩu
+    - Hỗ trợ email sinh viên
+    - Xử lý lỗi hệ thống
+    - Kết nối tài khoản
+    - Hướng dẫn sử dụng hệ thống
+
+- intent: tuyen_sinh
+  examples: |
+    - Điều kiện tuyển sinh ngành [tên ngành]
+    - Chuyển ngành giữa kỳ được không?
+    - Tiêu chí học song ngành
+    - Hồ sơ xin học bổng
+    - Thông tin tuyển sinh năm nay
+    - Điều kiện đăng ký vào trường
+    - Ngành đang tuyển sinh
+    - Chi tiết kỳ tuyển sinh
+    - Quy trình nộp hồ sơ
+    - Hướng dẫn tuyển sinh
+
+- intent: lich_hoc_chi_tiet
+  examples: |
+    - Tra cứu lịch học chi tiết
+    - Hướng dẫn xem TKB
+    - Cách kiểm tra lịch học
+    - Xem chi tiết giờ học
+    - Tra cứu lịch học từng môn
+    - Hướng dẫn tra cứu thời khóa biểu
+
+- intent: hoc_phi_chi_tiet
+  examples: |
+    - Phân tích chi tiết học phí
+    - Các khoản phí cụ thể
+    - Hướng dẫn thanh toán học phí
+    - Chi tiết từng khoản phí
+    - Cách thức nộp học phí
+    - Kiểm tra chi tiết học phí
+
+- intent: chuong_trinh_chi_tiet
+  examples: |
+    - Chi tiết môn học ngành
+    - Hướng dẫn chọn môn
+    - Thông tin chi tiết chương trình
+    - Danh sách môn học cụ thể
+    - Hướng dẫn đăng ký môn học
+    - Chi tiết từng học phần
+
+- intent: thu_tuc_chi_tiet
+  examples: |
+    - Hướng dẫn chi tiết xin giấy tờ
+    - Quy trình từng thủ tục
+    - Chi tiết cách làm giấy tờ
+    - Hướng dẫn từng bước
+    - Thủ tục cụ thể
+    - Quy trình xin giấy xác nhận
+
+- intent: ho_tro_ky_thuat_chi_tiet
+  examples: |
+    - Hướng dẫn đặt lại mật khẩu chi tiết
+    - Xử lý lỗi đăng nhập
+    - Hướng dẫn từng bước truy cập
+    - Chi tiết khắc phục sự cố
+    - Giải quyết vấn đề kỹ thuật
+    - Hướng dẫn sử dụng hệ thống

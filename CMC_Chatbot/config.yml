@@ -1,0 +1,36 @@
+language: vi
+
+pipeline:
+- name: WhitespaceTokenizer
+  split_symbol: " "
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: "char_wb"
+  min_ngram: 1
+  max_ngram: 4
+- name: LanguageModelFeaturizer
+  model_name: "bert"
+- name: DIETClassifier
+  epochs: 100
+  constrain_similarities: true
+  model_confidence: "softmax"
+- name: EntitySynonymMapper
+- name: ResponseSelector
+  epochs: 100
+
+policies:
+- name: MemoizationPolicy
+- name: RulePolicy
+  core_fallback_threshold: 0.4
+  core_fallback_action_name: "action_default_fallback"
+- name: UnexpecTEDIntentPolicy
+  max_history: 5
+  epochs: 100
+- name: TEDPolicy
+  max_history: 5
+  epochs: 100
+  constrain_similarities: true
+
+assistant_id: 20241113-080856-indulgent-shrub

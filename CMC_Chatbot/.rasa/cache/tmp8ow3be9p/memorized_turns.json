@@ -1,0 +1,11 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB1fnJyRmlKak1pbGwsAtLQeWQ==": "action_fetch_student_schedule",
+    "eJyNjVEKgCAQRK+yB4ioX68SIaEbSqbRrv2Id2+hos/6m2HezAylNlC2HQ89GfYpKiiX0HFaUcFtgifGKGwm3IXxUSxLTIsm49DmgPXf1IxsnCbOVhbecgMUEpOUnshbBUPfduPX7XgCX+tLNQ==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2flppaWxsLACFTHDw=": "utter_ask_fee",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2flppaS8CU0pKS1KJ4mGLcpsQCAICvNrw=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fmleUn5OTC+TX1sYCAPNVH0w=": "utter_ask_enrollment",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fmleUn5OTC+TXEjCstKQktSgeTQ9BM2MBjZ8/7A==": "action_listen"
+  }
+}

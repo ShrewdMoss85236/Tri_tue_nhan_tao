@@ -1,0 +1,352 @@
+version: "3.1"
+intents:
+  # Intents chính
+  - lich_hoc
+  - hoc_phi
+  - chuong_trinh_dao_tao
+  - thu_tuc_hanh_chinh
+  - thong_bao_su_kien
+  - ho_tro_ky_thuat
+  - tuyen_sinh
+
+  # Intents chi tiết
+  - lich_hoc_chi_tiet
+  - hoc_phi_chi_tiet
+  - chuong_trinh_chi_tiet
+  - thu_tuc_chi_tiet
+  - ho_tro_ky_thuat_chi_tiet
+
+entities:
+  - ten_lop
+  - ma_sinh_vien
+  - ten_nganh
+
+slots:
+  ten_lop:
+    type: text
+    influence_conversation: true
+  ma_sinh_vien:
+    type: text
+    influence_conversation: true
+  ten_nganh:
+    type: text
+    influence_conversation: true
+
+responses:
+  utter_lich_hoc:
+    - text: "Bạn có thể xem lịch học tuần này qua cổng thông tin sinh viên hoặc vui lòng cung cấp mã sinh viên để tôi giúp tra cứu."
+    - text: "Lịch học của bạn tuần này là [thong_tin_lich_hoc]. Bạn có thể kiểm tra chi tiết trên cổng thông tin sinh viên."
+    - text: "Kỳ học mới sẽ bắt đầu vào ngày [ngay_cu_the]. Bạn có thể xem thêm chi tiết trên cổng thông tin của trường."
+    - text: "Nếu bạn cần biết thêm thông tin về lịch học, hãy cho tôi biết mã sinh viên của bạn để tôi có thể tra cứu chính xác hơn."
+
+  utter_hoc_phi:
+    - text: "Học phí kỳ này có thể khác nhau tùy theo số tín chỉ bạn đăng ký. Vui lòng cung cấp mã sinh viên để tôi tra cứu giúp bạn."
+    - text: "Hạn nộp học phí thường là ngày [ngày cụ thể]. Bạn có thể tra cứu thêm thông tin trên cổng thông tin tài chính sinh viên."
+    - text: "Trường có các loại học bổng dành cho sinh viên có thành tích học tập xuất sắc và sinh viên gặp khó khăn tài chính."
+    - text: "Mức học phí hiện tại cho ngành [tên_ngành] là [mức học phí]. Bạn có thể kiểm tra chi tiết trên cổng thông tin tài chính."
+    - text: "Để biết cách thức thanh toán học phí, bạn có thể truy cập cổng thông tin tài chính hoặc liên hệ với phòng kế toán."
+    - text: "Nếu bạn cần kiểm tra số dư học phí, vui lòng cung cấp mã sinh viên để tôi có thể tra cứu chính xác hơn."
+
+  utter_chuong_trinh_dao_tao:
+    - text: "Ngành [tên ngành] bao gồm các môn học như [liệt kê một số môn học chính]. Bạn có thể xem chi tiết trong chương trình đào tạo trên trang web của trường."
+    - text: "Môn học bắt buộc và tự chọn có thể khác nhau tùy theo ngành. Bạn có thể xem danh sách môn học trên cổng thông tin sinh viên."
+    - text: "Để tốt nghiệp ngành [tên ngành], bạn cần hoàn thành tối thiểu [số tín chỉ] tín chỉ và đạt điểm trung bình từ [điểm trung bình yêu cầu] trở lên."
+    - text: "Cấu trúc chương trình học của ngành [tên ngành] bao gồm [mô tả cấu trúc chương trình]. Bạn có thể tham khảo thêm trên trang web của trường."
+    - text: "Điều kiện học vượt thường yêu cầu bạn phải đạt điểm trung bình từ [điểm trung bình yêu cầu] trở lên và có sự đồng ý của giảng viên."
+    - text: "Để biết thêm về quy định học tập của ngành [tên ngành], bạn có thể tham khảo tài liệu hướng dẫn trên cổng thông tin sinh viên."
+
+  utter_thu_tuc_hanh_chinh:
+    - text: "Bạn có thể đăng ký cấp giấy xác nhận sinh viên qua cổng thông tin sinh viên hoặc đến phòng công tác sinh viên."
+    - text: "Để bảo lưu kết quả học tập, bạn cần nộp đơn tại phòng đào tạo, kèm theo lý do và các giấy tờ hỗ trợ."
+    - text: "Cập nhật thông tin cá nhân qua cổng thông tin sinh viên trong mục 'Thông tin cá nhân'."
+    - text: "Để đăng ký hoặc hủy môn học, bạn có thể thực hiện qua cổng thông tin sinh viên trong mục 'Đăng ký môn học'."
+    - text: "Thủ tục chuyển ngành yêu cầu bạn nộp đơn xin chuyển ngành tại phòng đào tạo, kèm theo lý do và bảng điểm."
+    - text: "Các loại giấy tờ cần thiết thường bao gồm: CMND/CCCD, giấy xác nhận sinh viên, và các giấy tờ liên quan khác. Bạn có thể kiểm tra trên cổng thông tin sinh viên."
+
+  utter_thong_bao_su_kien:
+    - text: "Các sự kiện sắp tới được cập nhật trên cổng thông tin và fanpage của trường. Bạn có thể kiểm tra thường xuyên để không bỏ lỡ thông tin."
+    - text: "Thông báo mới nhất về học tập và hoạt động sẽ được gửi qua email sinh viên và đăng tải trên cổng thông tin. Hãy kiểm tra hộp thư của bạn thường xuyên."
+    - text: "Để tham gia câu lạc bộ, bạn có thể liên hệ với phòng công tác sinh viên hoặc tham gia các buổi giới thiệu câu lạc bộ được tổ chức định kỳ."
+    - text: "Thông tin về hội thảo nghề nghiệp sẽ được thông báo qua cổng thông tin sinh viên và email. Bạn có thể đăng ký tham gia trực tuyến."
+    - text: "Lịch sự kiện trong tháng sẽ được công bố trên cổng thông tin sinh viên. Hãy theo dõi để biết thêm chi tiết về các hoạt động."
+    - text: "Các hoạt động ngoại khóa và sự kiện học thuật thường xuyên diễn ra. Bạn có thể tham khảo trên cổng thông tin để biết thêm thông tin chi tiết."
+
+  utter_ho_tro_ky_thuat:
+    - text: "Để truy cập hệ thống học trực tuyến, vui lòng:
+      1. Truy cập vào đường link: [link hệ thống]
+      2. Nhập tài khoản sinh viên 
+      3. Nhập mật khẩu 
+      Nếu gặp khó khăn, liên hệ bộ phận hỗ trợ kỹ thuật."
+
+    - text: "Để khôi phục mật khẩu, bạn có thể:
+      1. Nhấn vào 'Quên mật khẩu' tại trang đăng nhập
+      2. Nhập email sinh viên để nhận mã xác thực
+      3. Thực hiện theo hướng dẫn để đặt lại mật khẩu
+      Nếu không thành công, liên hệ bộ phận IT qua số [số điện thoại hỗ trợ]."
+
+    - text: "Hướng dẫn truy cập thư viện điện tử:
+      1. Đăng nhập vào cổng thông tin sinh viên
+      2. Chọn mục 'Thư viện điện tử'
+      3. Sử dụng tài khoản sinh viên để truy cập
+      Hỗ trợ kỹ thuật: [email/số điện thoại hỗ trợ]"
+
+    - text: "Xử lý các lỗi thường gặp khi đăng nhập:
+      - Kiểm tra kết nối mạng
+      - Xóa bộ nhớ cache trình duyệt
+      - Thử đăng nhập bằng trình duyệt khác
+      - Nếu vẫn không được, liên hệ bộ phận IT"
+
+    - text: "Hỗ trợ email sinh viên:
+      1. Địa chỉ email: [tênmáy.mã sinh viên@domain.edu.vn]
+      2. Mật khẩu mặc định: [quy tắc đặt mật khẩu]
+      3. Khuyến nghị đổi mật khẩu sau lần đầu đăng nhập
+      Hỗ trợ kỹ thuật: [thông tin liên hệ]"
+
+    - text: "Các bước kết nối tài khoản:
+      1. Đăng nhập vào hệ thống chính
+      2. Vào mục 'Quản lý tài khoản'
+      3. Chọn 'Liên kết tài khoản'
+      4. Làm theo hướng dẫn chi tiết
+      Cần hỗ trợ? Liên hệ [thông tin hỗ trợ]"
+
+    - text: "Hướng dẫn sử dụng hệ thống:
+      - Xem video hướng dẫn tại [link video]
+      - Tải tài liệu hướng dẫn chi tiết tại [link tài liệu]
+      - Truy cập mục 'Trợ giúp' trong hệ thống
+      Hỗ trợ trực tiếp: [thông tin liên hệ]"
+
+  utter_tuyen_sinh:
+    - text: "Điều kiện tuyển sinh ngành [tên ngành] bao gồm: [các điều kiện cụ thể như điểm thi, chứng chỉ, phỏng vấn, v.v.]."
+    - text: "Có một số ngành học cho phép chuyển vào giữa kỳ. Bạn có thể tham khảo thêm thông tin chi tiết trên cổng thông tin sinh viên hoặc liên hệ với phòng đào tạo."
+    - text: "Để nộp hồ sơ xin học bổng, bạn cần chuẩn bị các giấy tờ sau: [liệt kê các giấy tờ cần thiết như đơn xin học bổng, bảng điểm, thư giới thiệu, v.v.]."
+    - text: "Thông tin tuyển sinh năm nay sẽ được công bố trên cổng thông tin của trường. Hãy theo dõi để cập nhật các thông tin mới nhất."
+    - text: "Điều kiện đăng ký vào trường thường bao gồm: [các yêu cầu như tốt nghiệp THPT, điểm số tối thiểu, v.v.]."
+    - text: "Các ngành đang tuyển sinh hiện tại có thể được tìm thấy trên cổng thông tin tuyển sinh của trường. Hãy kiểm tra thường xuyên để không bỏ lỡ cơ hội."
+    - text: "Chi tiết về kỳ tuyển sinh, bao gồm thời gian và quy trình, sẽ được thông báo trên cổng thông tin. Bạn có thể tham khảo để biết thêm thông tin."
+    - text: "Quy trình nộp hồ sơ thường bao gồm các bước: [liệt kê các bước như điền đơn, nộp hồ sơ, kiểm tra thông tin, v.v.]."
+    - text: "Hướng dẫn tuyển sinh sẽ được cung cấp trên cổng thông tin và trong các buổi tư vấn trực tiếp. Hãy tham gia để được giải đáp thắc mắc."
+
+  utter_lich_hoc_huongdan:
+    - text: "Để tra cứu lịch học chi tiết, bạn vui lòng thực hiện các bước sau:
+          1. Truy cập vào cổng thông tin sinh viên: [link cổng thông tin]
+          2. Đăng nhập bằng tài khoản sinh viên của bạn
+          3. Chọn mục 'Tra cứu lịch học' hoặc 'Thời khóa biểu'
+          4. Chọn kỳ học và tuần bạn muốn xem
+          5. Nhấn 'Xem' để hiển thị lịch học của bạn."
+
+    - text: "Nếu bạn gặp khó khăn trong việc tra cứu lịch học, vui lòng liên hệ với phòng đào tạo qua số điện thoại [số điện thoại] hoặc email [email hỗ trợ] để được hỗ trợ trực tiếp."
+
+    - text: "Ngoài ra, bạn cũng có thể xem lịch học từng môn bằng cách:
+          1. Vào mục 'Lịch học từng môn' trên cổng thông tin
+          2. Chọn môn học mà bạn muốn xem
+          3. Nhấn 'Xem chi tiết' để biết thông tin về giờ học và phòng học."
+
+    - text: "Hướng dẫn tra cứu thời khóa biểu:
+          - Truy cập cổng thông tin sinh viên
+          - Đăng nhập và chọn mục 'Thời khóa biểu'
+          - Chọn kỳ học và nhấn 'Xem' để xem thời khóa biểu của bạn."
+
+  utter_hoc_phi_huongdan:
+    - text: "Quy trình tra cứu và nộp học phí chi tiết:
+          1. Đăng nhập vào cổng thông tin tài chính: [link cổng thông tin]
+          2. Chọn mục 'Tra cứu học phí'
+          3. Kiểm tra chi tiết các khoản phí:
+             - Học phí chính
+             - Phí dịch vụ
+             - Phí giáo trình
+             - Các khoản phí bổ sung (nếu có)
+          4. Xác nhận tổng số tiền phải nộp
+          5. Chọn phương thức thanh toán:
+             - Chuyển khoản ngân hàng
+             - Nộp trực tiếp tại phòng kế toán
+             - Thanh toán online qua cổng dịch vụ"
+
+    - text: "Chi tiết các khoản phí học tập:
+          🔹 Học phí chính: [mức học phí theo từng ngành/chương trình]
+          🔹 Phí dịch vụ: [chi tiết các dịch vụ đi kèm]
+          🔹 Phí giáo trình và tài liệu: [mức phí cụ thể]
+          🔹 Phí bảo hiểm: [mức phí bảo hiểm]
+          🔹 Các khoản phí khác: [liệt kê các khoản phí bổ sung]
+
+          Lưu ý: Mức học phí có thể thay đổi theo từng năm học và ngành đào tạo."
+
+    - text: "Hướng dẫn thanh toán học phí:
+          ✅ Phương thức chuyển khoản:
+          - Ngân hàng: [tên ngân hàng]
+          - Số tài khoản: [số tài khoản]
+          - Nội dung chuyển khoản: [mã sinh viên + Học phí kỳ...]
+
+          ✅ Thanh toán trực tiếp:
+          - Địa điểm: Phòng Kế toán
+          - Giờ làm việc: [giờ làm việc]
+          - Mang theo: Giấy tờ tùy thân
+
+          ⚠️ Hạn nộp học phí: [ngày cụ thể] của mỗi kỳ học"
+
+    - text: "Chính sách ưu đãi và hỗ trợ học phí:
+          🏆 Miễn giảm học phí cho:
+          - Sinh viên diện chính sách
+          - Sinh viên có thành tích học tập xuất sắc
+          - Sinh viên thuộc hộ nghèo, cận nghèo
+
+          📞 Hỗ trợ tài chính:
+          - Liên hệ phòng Công tác sinh viên
+          - Điện thoại: [số điện thoại]
+          - Email: [địa chỉ email hỗ trợ]"
+
+    - text: "Lưu ý quan trọng về học phí:
+          ⚠️ Nộp đúng hạn để:
+          - Không bị khóa tài khoản học tập
+          - Tránh các khoản phí phạt chậm nộp
+          - Đảm bảo quyền lợi học tập
+
+          💡 Khuyến nghị:
+          - Kiểm tra số dư học phí định kỳ
+          - Lưu giữ biên lai thanh toán
+          - Liên hệ kế toán nếu có thắc mắc"
+
+  utter_chuong_trinh_huongdan:
+    - text: "🔍 Hướng dẫn chi tiết về chương trình đào tạo:
+          1. Truy cập website khoa: [link website]
+          2. Tải file chương trình chi tiết 
+          3. Kiểm tra cấu trúc chương trình:
+             - Môn học bắt buộc
+             - Môn học tự chọn
+             - Số tín chỉ yêu cầu
+          4. Tham khảo sổ tay sinh viên
+          5. Trao đổi với cố vấn học tập để được hướng dẫn cụ thể"
+
+    - text: "📋 Quy trình đăng ký môn học:
+          Bước 1: Kiểm tra điều kiện tiên quyết
+          - Xem các môn học đã hoàn thành
+          - Kiểm tra điều kiện học các môn chuyên ngành
+
+          Bước 2: Xác định số tín chỉ
+          - Số tín chỉ tối thiểu: [số lượng]
+          - Số tín chỉ tối đa: [số lượng]
+
+          Bước 3: Ưu tiên môn học
+          1. Các môn bắt buộc
+          2. Môn học chuyên ngành
+          3. Các môn tự chọn
+
+          Bước 4: Đăng ký trực tuyến
+          - Truy cập cổng đăng ký môn học
+          - Chọn môn và xác nhận"
+
+    - text: "🎓 Cấu trúc chương trình đào tạo:
+          Khối kiến thức:
+          ✅ Giáo dục đại cương: [số tín chỉ]
+          ✅ Kiến thức cơ sở ngành: [số tín chỉ]
+          ✅ Kiến thức chuyên ngành: [số tín chỉ]
+          ✅ Thực tập/Khóa luận: [số tín chỉ]
+
+          Lưu ý:
+          - Phải hoàn thành đủ số tín chỉ quy định
+          - Đảm bảo điều kiện tốt nghiệp"
+
+    - text: "📚 Hướng dẫn chọn môn học hiệu quả:
+          1. Xác định mục tiêu học tập
+          2. Kiểm tra lộ trình học tập
+          3. Đánh giá năng lực bản thân
+          4. Tham khảo ý kiến cố vấn
+          5. Ưu tiên các môn:
+             - Phù hợp với định hướng nghề nghiệp
+             - Có điều kiện tiên quyết
+             - Nằm trong kế hoạch đào tạo
+
+          💡 Mẹo: Luôn lên kế hoạch học tập trước 1-2 kỳ"
+
+    - text: "⚠️ Lưu ý quan trọng khi đăng ký môn học:
+          - Kiểm tra trùng lịch học
+          - Xem xét khả năng tiếp thu
+          - Đảm bảo đủ điều kiên tiên quyết
+          - Không vượt quá số tín chỉ cho phép
+          - Cân đối giữa các môn khó và dễ
+
+          📞 Hỗ trợ:
+          - Phòng đào tạo: [số điện thoại]
+          - Email hỗ trợ: [địa chỉ email]"
+
+  utter_thu_tuc_huongdan:
+    - text: "📝 Quy trình xin giấy tờ hành chính:
+          1. Truy cập cổng thông tin sinh viên: [link cổng thông tin]
+          2. Chọn mục 'Dịch vụ hành chính'
+          3. Chọn loại giấy tờ cần xin (ví dụ: Giấy xác nhận sinh viên, Giấy chứng nhận tốt nghiệp, v.v.)
+          4. Điền đầy đủ thông tin theo mẫu yêu cầu
+          5. Tải lên các tài liệu cần thiết (nếu có)
+          6. Gửi yêu cầu và chờ xử lý
+          7. Nhận kết quả qua email hoặc tại văn phòng"
+
+    - text: "⏳ Thời gian xử lý thông thường:
+          - Giấy tờ hành chính: từ 3-5 ngày làm việc
+          - Giấy xác nhận: từ 1-3 ngày làm việc
+
+          Bạn có thể theo dõi trạng thái yêu cầu của mình trực tuyến qua cổng thông tin sinh viên."
+
+    - text: "📋 Lưu ý khi xin giấy tờ:
+          - Đảm bảo thông tin điền chính xác và đầy đủ
+          - Kiểm tra các tài liệu cần thiết trước khi gửi yêu cầu
+          - Nếu có thắc mắc, bạn có thể liên hệ với phòng hành chính qua:
+            - Điện thoại: [số điện thoại]
+            - Email: [địa chỉ email hỗ trợ]"
+
+    - text: "🔍 Các loại giấy tờ thường xin:
+          1. Giấy xác nhận sinh viên
+          2. Giấy chứng nhận tốt nghiệp
+          3. Giấy tờ liên quan đến học phí
+          4. Giấy tờ xin nghỉ học
+          5. Giấy tờ khác theo yêu cầu
+
+          Bạn có thể tìm thấy thông tin chi tiết về từng loại giấy tờ trên cổng thông tin sinh viên."
+
+    - text: "💡 Mẹo hữu ích:
+          - Lên kế hoạch xin giấy tờ trước thời hạn cần thiết
+          - Theo dõi thường xuyên trạng thái yêu cầu của bạn
+          - Lưu giữ biên lai hoặc thông báo xác nhận khi gửi yêu cầu"
+
+  utter_ho_tro_ky_thuat_huongdan:
+    - text: "🔑 Hướng dẫn đặt lại mật khẩu:
+          1. Truy cập trang đăng nhập: [link trang đăng nhập]
+          2. Nhấn vào 'Quên mật khẩu'
+          3. Nhập email hoặc số điện thoại đã đăng ký
+          4. Kiểm tra hộp thư đến hoặc tin nhắn SMS để nhận liên kết đặt lại mật khẩu
+          5. Làm theo hướng dẫn trong email hoặc tin nhắn để đặt lại mật khẩu mới
+          6. Đăng nhập bằng mật khẩu mới"
+
+    - text: "⚠️ Nếu bạn gặp khó khăn trong quá trình đặt lại mật khẩu, hãy thử các bước sau:
+          - Kiểm tra lại email hoặc số điện thoại đã đăng ký
+          - Đảm bảo rằng bạn không sử dụng trình duyệt cũ hoặc chế độ ẩn danh
+          - Thử đặt lại mật khẩu từ một thiết bị khác"
+
+    - text: "🛠️ Xử lý lỗi đăng nhập:
+          - Kiểm tra lại tên đăng nhập và mật khẩu
+          - Đảm bảo Caps Lock không được bật
+          - Nếu bạn đã đặt lại mật khẩu nhưng vẫn không đăng nhập được, hãy thử xóa bộ nhớ cache và cookie của trình duyệt
+          - Nếu vẫn không thành công, hãy liên hệ với bộ phận hỗ trợ kỹ thuật"
+
+    - text: "📞 Liên hệ bộ phận hỗ trợ kỹ thuật:
+          - Hotline: 1900.xxxx
+          - Email: hotro@truong.edu.vn
+          - Thời gian hỗ trợ: [giờ làm việc]"
+
+    - text: "💡 Hướng dẫn sử dụng hệ thống:
+          - Để biết thêm thông tin chi tiết về cách sử dụng hệ thống, bạn có thể tham khảo tài liệu hướng dẫn trên trang web: [link tài liệu hướng dẫn]
+          - Nếu có câu hỏi cụ thể, hãy gửi email đến bộ phận hỗ trợ kỹ thuật."
+
+actions:
+  # Actions chính
+  - utter_lich_hoc
+  - utter_hoc_phi
+  - utter_chuong_trinh_dao_tao
+  - utter_thu_tuc_hanh_chinh
+  - utter_thong_bao_su_kien
+  - utter_ho_tro_ky_thuat
+  - utter_tuyen_sinh
+
+  # Action hướng dẫn
+  - utter_lich_hoc_huongdan
+  - utter_hoc_phi_huongdan
+  - utter_chuong_trinh_huongdan
+  - utter_thu_tuc_huongdan
+  - utter_ho_tro_ky_thuat_huongdan
